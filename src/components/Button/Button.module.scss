@@ -1,0 +1,35 @@
+.button {
+	display: inline-block;
+
+	box-sizing: border-box;
+	padding: 10px;
+
+	cursor: pointer;
+	transition: all 0.2s;
+	text-align: center;
+
+	border: none;
+	border-radius: 5px;
+
+	font-size: 14px;
+}
+
+.primary {
+	color: #FFF;
+	background-color: #384564;
+}
+
+.primary:hover {
+	background-color: #2D3953;
+}
+
+.ghost {
+	color: #000;
+	border: 1px solid rgb(197 196 196);
+	background: none;
+}
+
+.ghost:hover {
+	color: #FFF;
+	background-color: #384564;
+}

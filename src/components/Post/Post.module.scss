@@ -1,0 +1,44 @@
+.root {
+	min-height: 100px;
+	margin-bottom: 10px;
+
+	background-color: rgb(0 100 0);
+}
+
+.wrapper {
+	display: grid;
+
+	padding: 10px 20px;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas:
+		"image author"
+		"image     content";
+}
+
+.image {
+	grid-area: image;
+
+	margin-right: 30px;
+
+	img {
+		width: 65px;
+		height: 65px;
+
+		border-radius: 100%;
+	}
+}
+
+.author {
+	margin-bottom: 10px;
+
+	font-size: 20px;
+	font-weight: 600;
+	grid-area: author;
+}
+
+.content {
+	font-size: 16px;
+	font-weight: 400;
+	grid-area: content;
+}

@@ -1,0 +1,17 @@
+.root {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 5px 20px;
+}
+
+.count {
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 30px;
+
+	span {
+		font-weight: 900;
+	}
+}
