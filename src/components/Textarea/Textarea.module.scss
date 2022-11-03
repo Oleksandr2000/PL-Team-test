@@ -6,13 +6,13 @@
 	flex-direction: column;
 
 	width: 100%;
-	margin: 25px 0;
+	margin: 25px 0 35px 0;
 }
 
 .large {
-	input {
+	textarea {
 		width: 90%;
-		height: 30px;
+		min-height: 100px;
 		padding: 5px 20px;
 
 		border: 1px solid rgb(201 201 201);
@@ -22,7 +22,7 @@
 		line-height: 20px;
 	}
 
-	input:focus-visible {
+	textarea:focus-visible {
 		outline: solid 3px #384564;
 	}
 
@@ -49,9 +49,9 @@
 }
 
 .medium {
-	input {
+	textarea {
 		width: 90%;
-		height: 28px;
+		min-height: 80px;
 		padding: 5px 15px;
 
 		border: 1px solid rgb(201 201 201);
@@ -61,7 +61,7 @@
 		line-height: 18px;
 	}
 
-	input:focus-visible {
+	textarea:focus-visible {
 		outline: solid 3px #384564;
 	}
 
@@ -88,8 +88,9 @@
 }
 
 .small {
-	input {
+	textarea {
 		width: 90%;
+		min-height: 60px;
 		padding: 5px 16px;
 
 		border: 1px solid rgb(201 201 201);
@@ -100,7 +101,7 @@
 		line-height: 16px;
 	}
 
-	input:focus-visible {
+	textarea:focus-visible {
 		outline: solid 3px #384564;
 	}
 
@@ -118,7 +119,6 @@
 		bottom: -25px;
 
 		height: 20px;
-
 
 		color: red;
 

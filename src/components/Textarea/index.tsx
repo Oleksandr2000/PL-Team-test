@@ -1,21 +1,10 @@
 import React from "react";
-import { FormControlProps } from "./FormControl.props";
+import { TextareaProps } from "./Textarea.props";
 import cn from "classnames";
 
-import styles from "./FormControl.module.scss";
+import styles from "./Textarea.module.scss";
 
-const Input = ({
-  placeholder,
-  label,
-  variant,
-  error,
-  value,
-  name,
-  type,
-  handlerVlue,
-  touched,
-  onBlur,
-}: FormControlProps) => {
+const Textarea = ({ placeholder, label, variant, error, value, name, touched, handlerVlue, onBlur }: TextareaProps) => {
   return (
     <div
       className={cn(styles.root, {
@@ -24,11 +13,10 @@ const Input = ({
         [styles.small]: variant === "small",
       })}>
       <label className={styles.label}>{label}</label>
-      <input
+      <textarea
         placeholder={placeholder}
         value={value}
         name={name}
-        type={type}
         onBlur={onBlur}
         onChange={e => handlerVlue(name, e.target.value)}
       />
@@ -37,4 +25,4 @@ const Input = ({
   );
 };
 
-export default Input;
+export default Textarea;

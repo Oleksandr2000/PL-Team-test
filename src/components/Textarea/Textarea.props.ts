@@ -1,6 +1,6 @@
-import { DetailedHTMLProps, InputHTMLAttributes } from "react";
+import { DetailedHTMLProps, TextareaHTMLAttributes } from "react";
 
-export interface FormControlProps  extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+export interface TextareaProps  extends DetailedHTMLProps<TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement> {
     placeholder: string;
     variant?: "large" | "medium" | "small";
     error?: string;

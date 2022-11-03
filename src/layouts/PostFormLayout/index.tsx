@@ -7,6 +7,7 @@ import styles from "./PostFormLayout.module.scss";
 import { PostFormLayoutProps } from "./PostFormLayout.props";
 import { Post } from "../../components/Post/Post.props";
 import { Button } from "../../components/Button/Button";
+import Textarea from "../../components/Textarea";
 
 const PostFormLayout = ({ handlerSubmit, title }: PostFormLayoutProps) => {
   const PostForm = useFormik({
@@ -33,6 +34,7 @@ const PostFormLayout = ({ handlerSubmit, title }: PostFormLayoutProps) => {
     <div className={styles.root}>
       <form onSubmit={PostForm.handleSubmit}>
         <FormControl
+          id="author"
           variant="small"
           type="text"
           label="Author"
@@ -40,9 +42,12 @@ const PostFormLayout = ({ handlerSubmit, title }: PostFormLayoutProps) => {
           placeholder="Author"
           value={PostForm.values.author}
           handlerVlue={PostForm.setFieldValue}
+          onBlur={PostForm.handleBlur}
           error={PostForm.errors.author}
+          touched={PostForm.touched.author}
         />
         <FormControl
+          id="avatar"
           variant="small"
           type="text"
           label="Avatar"
@@ -50,17 +55,21 @@ const PostFormLayout = ({ handlerSubmit, title }: PostFormLayoutProps) => {
           placeholder="Image url"
           value={PostForm.values.avatar}
           handlerVlue={PostForm.setFieldValue}
+          onBlur={PostForm.handleBlur}
           error={PostForm.errors.avatar}
+          touched={PostForm.touched.avatar}
         />
-        <FormControl
+        <Textarea
+          id="content"
           variant="small"
-          type="text"
           name="content"
           label="Text"
           placeholder="Text"
           value={PostForm.values.content}
           handlerVlue={PostForm.setFieldValue}
+          onBlur={PostForm.handleBlur}
           error={PostForm.errors.content}
+          touched={PostForm.touched.content}
         />
         <Button appearance="primary" type="submit">
           Опублікувати
